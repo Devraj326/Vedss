@@ -81,7 +81,7 @@ function App() {
               transition={{ type: "spring", stiffness: 260, damping: 20 }}
             >
               <Heart className="logo-icon" />
-              <span>Our Cute App</span>
+              <span>Vedss</span>
               <Sparkles className="sparkle" />
             </motion.div>
           </div>

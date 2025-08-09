@@ -69,7 +69,7 @@ const HomePage = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
         >
-          Welcome to Our Cute App! 💕
+          Welcome to Vedss! 💕
         </motion.h1>
         
         <motion.p 
