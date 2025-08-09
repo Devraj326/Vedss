@@ -279,7 +279,7 @@ const PhotoGallery = () => {
               {viewMode === 'grid' ? (
                 <>
                   <img
-                    src={`http://localhost:5000/${photo.path}`}
+                    src={`${process.env.REACT_APP_API_URL || 'http://localhost:5000'}/${photo.path}`}
                     alt={photo.title}
                     style={{
                       width: '100%',
@@ -301,7 +301,7 @@ const PhotoGallery = () => {
               ) : (
                 <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
                   <img
-                    src={`http://localhost:5000/${photo.path}`}
+                    src={`${process.env.REACT_APP_API_URL || 'http://localhost:5000'}/${photo.path}`}
                     alt={photo.title}
                     style={{
                       width: '80px',
@@ -395,7 +395,7 @@ const PhotoGallery = () => {
             </div>
             
             <img
-              src={`http://localhost:5000/${selectedPhoto.path}`}
+              src={`${process.env.REACT_APP_API_URL || 'http://localhost:5000'}/${selectedPhoto.path}`}
               alt={selectedPhoto.title}
               style={{
                 width: '100%',
@@ -415,7 +415,7 @@ const PhotoGallery = () => {
             
             <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
               <a
-                href={`http://localhost:5000/${selectedPhoto.path}`}
+                href={`${process.env.REACT_APP_API_URL || 'http://localhost:5000'}/${selectedPhoto.path}`}
                 download={selectedPhoto.originalName}
                 className="btn btn-primary"
               >
