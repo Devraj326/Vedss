@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: cute-couple-backend
+    runtime: node
+    plan: free
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+    # You'll need to add these in Render dashboard:
+    # MONGODB_URI: your_mongodb_atlas_connection_string
+    # FRONTEND_URL: your_frontend_url_after_deployment
