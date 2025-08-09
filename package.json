@@ -1,0 +1,32 @@
+{
+  "name": "cute-couple-app",
+  "version": "1.0.0",
+  "description": "A cute couple app with photo gallery, calendar, and study tools",
+  "main": "backend/server.js",
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "scripts": {
+    "setup": "powershell -ExecutionPolicy Bypass -File setup.ps1",
+    "dev": "concurrently \"cd backend && npm run dev\" \"cd frontend && npm start\"",
+    "start": "cd backend && npm start",
+    "start:backend": "cd backend && npm start",
+    "start:frontend": "cd frontend && npm start",
+    "build": "cd frontend && npm run build",
+    "build:frontend": "cd frontend && npm run build",
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "heroku-postbuild": "npm run install:all && npm run build"
+  },
+  "keywords": ["couple", "love", "photos", "calendar", "study", "react", "node"],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/cute-couple-app.git"
+  },
+  "homepage": "https://github.com/yourusername/cute-couple-app#readme",
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
